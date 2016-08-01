@@ -1,6 +1,6 @@
 // Datos Iniciales
 	var nro_cliente;
-	var pass_cliente;
+	var pass_cliente="";
 	var proceso=1;
 
 
@@ -34,9 +34,11 @@
 // Deposito
 
 // Operaciones
+	function adicionarPass(numero){
+		pass_cliente = pass_cliente + numero;
+	}
+	
 	function verificarUser(){
-		// Dato seleccionado en select
-		
 		nro_cliente = document.getElementById("listado_clientes").selectedIndex;
 
 		if (clientes[nro_cliente].pass==pass_cliente) {
@@ -48,7 +50,6 @@
 			document.getElementById("pass").innerHTML='';
 			pass_cliente = "";
 		}
-
 	}
 
 	function verificarSaldo(monto_retiro){
