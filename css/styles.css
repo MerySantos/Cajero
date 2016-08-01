@@ -1,0 +1,94 @@
+.cont_cajero {
+  margin: 60px;
+  padding: 20px;
+  background: #D8CFC6;
+  height: auto;
+  width: auto;
+}
+
+.cont_cajero .cajero {
+  padding: 40px;
+  background: #8A8A8A;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.cont_cajero .cajero .pantalla {
+  width: 470px;
+  height: 300px;
+  background: #B9B9B9;
+  margin-left: 110px;
+}
+
+.cont_cajero .cajero .btn_der {
+  margin-top: -300;
+}
+
+.cont_cajero .cajero .btn_der ul {
+  list-style: none;
+}
+
+.cont_cajero .cajero .btn_der ul li {
+  margin-bottom: 15px;
+}
+
+.cont_cajero .cajero .btn_der ul li a {
+  width: 80px;
+}
+
+.cont_cajero .cajero .btn_izq {
+  text-align: center;
+  margin-left: -30px;
+}
+
+.cont_cajero .cajero .btn_izq ul {
+  list-style: none;
+}
+
+.cont_cajero .cajero .btn_izq ul li {
+  margin-bottom: 15px;
+}
+
+.cont_cajero .cajero .btn_izq ul li a {
+  width: 80px;
+}
+
+.cont_cajero .cont_btnb {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.cont_cajero .cont_btnb .btnb {
+  width: 250px;
+  height: auto;
+  padding: 10px;
+  background: #898989;
+}
+
+.cont_cajero .cont_btnb .btnb ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cont_cajero .cont_btnb .btnb ul li {
+  display: inline-block;
+}
+
+.cont_cajero .cont_btnb .btnb ul li a {
+  width: 61px;
+  height: 61px;
+  margin-bottom: 5px;
+}
+
+.cont_cajero .cont_btnb .btnbi {
+  padding: 10px;
+  background: #898989;
+  margin-top: -295px;
+  margin-left: -50px;
+}
+
+.cont_cajero .cont_btnb .btnbi ul li {
+  list-style: none a;
+  list-style-width: 20px;
+  list-style-height: 20px;
+}
