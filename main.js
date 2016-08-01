@@ -1,6 +1,7 @@
 // Datos Iniciales
 	var nro_cliente;
-	var pass;
+	var pass_cliente;
+	var proceso=1;
 
 
 	var clientes=[
@@ -38,7 +39,16 @@
 		
 		nro_cliente = document.getElementById("listado_clientes").selectedIndex;
 
-		if () {}
+		if (clientes[nro_cliente].pass==pass_cliente) {
+			proceso=2;
+			//mostrar la nueva pantalla y ocultar la actual
+		}
+		else{
+			alert("La contraseña es erronea");
+			document.getElementById("pass").innerHTML='';
+			pass_cliente = "";
+		}
+
 	}
 
 	function verificarSaldo(monto_retiro){
