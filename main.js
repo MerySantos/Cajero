@@ -6,9 +6,9 @@
 
 	var clientes=[
 		{nombre:"Luis", nrocuenta:"040-235648",pass:"1234", saldo:1000},
-		{nombre:"Shelby", nrocuenta:"040-885624",pass:"9998", saldo:1800},
-		{nombre:"Andrea", nrocuenta:"040-323410",pass:"5354", saldo:10000},
-		{nombre:"Misha", nrocuenta:"040-323410",pass:"5678", saldo:100},
+		{nombre:"Shelby", nrocuenta:"040-885624",pass:"5678", saldo:1800},
+		{nombre:"Andrea", nrocuenta:"040-323410",pass:"3495", saldo:10000},
+		{nombre:"Misha", nrocuenta:"040-323410",pass:"4321", saldo:100},
 	];
 
 // Inicializar app
