@@ -35,9 +35,13 @@
 
 // Operaciones
 	function adicionarPass(numero){
-		pass_cliente = pass_cliente + numero;
+		if (document.getElementById("pass").length <= 4) {
+			pass_cliente = pass_cliente + numero;
+			document.getElementById("pass").value= pass_cliente;
+		}
+		
 	}
-	
+
 	function verificarUser(){
 		nro_cliente = document.getElementById("listado_clientes").selectedIndex;
 
@@ -69,6 +73,6 @@
 	function updateSelectClientes(){
 	  var select=document.getElementById("listado_clientes");
 	  for (var i=0;i<clientes.length;i++){
-	    select.innerHTML+='<option value="'+ i +'">'+cliente[i].nombre+' </option>';
+	    select.innerHTML+='<option value="'+ i +'">'+clientes[i].nombre+"  "+ clientes[i].nrocuenta+' </option>';
 	  }
 	}
