@@ -5,9 +5,10 @@
 
 
 	var clientes=[
-		{nombre:"Paty", nrocuenta:"040-235648",pass:"1234", saldo:1000},
-		{nombre:"Gerson", nrocuenta:"040-885624",pass:"9998", saldo:1800},
-		{nombre:"Misha", nrocuenta:"040-323410",pass:"5354", saldo:10000},
+		{nombre:"Luis", nrocuenta:"040-235648",pass:"1234", saldo:1000},
+		{nombre:"Shelby", nrocuenta:"040-885624",pass:"9998", saldo:1800},
+		{nombre:"Andrea", nrocuenta:"040-323410",pass:"5354", saldo:10000},
+		{nombre:"Misha", nrocuenta:"040-323410",pass:"5678", saldo:100},
 	];
 
 // Inicializar app
@@ -34,12 +35,12 @@
 // Deposito
 
 // Operaciones
+	// Añadir datos de contraseña
 	function adicionarPass(numero){
-		if (document.getElementById("pass").length <= 4) {
+		if (document.getElementById("pass").value.length < 4) {
 			pass_cliente = pass_cliente + numero;
 			document.getElementById("pass").value= pass_cliente;
 		}
-		
 	}
 
 	function verificarUser(){
@@ -47,6 +48,7 @@
 
 		if (clientes[nro_cliente].pass==pass_cliente) {
 			proceso=2;
+			alert("ok");
 			//mostrar la nueva pantalla y ocultar la actual
 		}
 		else{

@@ -1,3 +1,9 @@
+.width_botones_tablero{
+  width: 30%;
+}
+.altura_botones_tablero{
+  height: 2%;
+}
 .cont_cajero {
   margin: 60px;
   padding: 20px;
