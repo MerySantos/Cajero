@@ -1,29 +1,30 @@
-.width_botones_tablero{
-  width: 30%;
-}
-.altura_botones_tablero{
-  height: 2%;
-}
 .cont_cajero {
   margin: 60px;
   padding: 20px;
-  background: #D8CFC6;
+  background: #C0C0C0;
   height: auto;
   width: auto;
+  border: 10px solid #D6D6D6;
 }
 
 .cont_cajero .cajero {
   padding: 40px;
-  background: #8A8A8A;
+  background: #AAAAAA;
   border: 1px solid #fff;
   border-radius: 10px;
 }
 
 .cont_cajero .cajero .pantalla {
-  width: 470px;
+  width: 450px;
   height: 300px;
-  background: #B9B9B9;
+  background: #A8C6FA;
   margin-left: 110px;
+}
+.cont_cajero .cajero .pantalla .contp{
+  padding: 100px 20px 100px 20px;
+}
+.cont_cajero .cajero .pantalla .contp label{
+  font-size: 17px;
 }
 
 .cont_cajero .cajero .btn_der {
@@ -67,8 +68,8 @@
 .cont_cajero .cont_btnb .btnb {
   width: 250px;
   height: auto;
-  padding: 10px;
-  background: #898989;
+  padding:10px 10px 0 10px;
+  background: #AAAAAA;
 }
 
 .cont_cajero .cont_btnb .btnb ul {
@@ -83,18 +84,53 @@
 .cont_cajero .cont_btnb .btnb ul li a {
   width: 61px;
   height: 61px;
-  margin-bottom: 5px;
+  margin-bottom: 9.5px;
 }
 
 .cont_cajero .cont_btnb .btnbi {
-  padding: 10px;
-  background: #898989;
-  margin-top: -295px;
-  margin-left: -50px;
+  padding:10px 10px 0 0;
+  background: #AAAAAA;
 }
 
+.cont_cajero .cont_btnb .btnbi ul{
+ padding-left: 0;
+}
 .cont_cajero .cont_btnb .btnbi ul li {
-  list-style: none a;
+  list-style: none;
   list-style-width: 20px;
   list-style-height: 20px;
+}
+.cont_cajero .cont_btnb .btnbi ul li a{
+  text-align: center;
+  width: 130px;
+  height: 61px;
+  margin-bottom: 9.5px;
+}
+
+#proceso2 {
+  width: 450px;
+  height: 300px;
+  background: #A8C6FA;
+  margin-left: 110px;
+}
+#proceso2  .contp{
+  padding: 8px 20px 50px 20px;
+}
+ #proceso2  .contp p{
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+#proceso3 {
+  width: 450px;
+  height: 300px;
+  background: #A8C6FA;
+  margin-left: 110px;
+}
+#proceso3  .contp-der,.contp-izq{
+  padding: 20px 20px 50px 20px;
+}
+ #proceso3  .contp-der p,.contp-izq p{
+  font-size: 17px;
+  font-weight: 5px;
+  margin-bottom: 30px;
 }
