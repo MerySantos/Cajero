@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/styles.css"/>
   <script src="main.js"></script>
 </head>
-<body>
+<body onload="initApp()">
   <div class="container">
     <div class="col-md-1"></div>
     <div class="col-md-10">
@@ -20,10 +20,10 @@
         <div class="cajero">
           <div class="btn_izq pull-left">
             <ul>
-              <li><a id="btn1" href="#" role="button" class="btn btn-default btn-lg">>></a></li>
-              <li><a id="btn2" href="#" role="button" class="btn btn-default btn-lg">>></a></li>
-              <li><a id="btn3" href="#" role="button" class="btn btn-default btn-lg">>> </a></li>
-              <li><a id="btn4" href="#" role="button" class="btn btn-default btn-lg">>> </a></li>
+              <li><a id="btn1" href="#" role="button" class="btn btn-default btn-lg"> >> </a></li>
+              <li><a id="btn2" href="#" role="button" class="btn btn-default btn-lg"> >> </a></li>
+              <li><a id="btn3" href="#" role="button" class="btn btn-default btn-lg"> >> </a></li>
+              <li><a id="btn4" href="#" role="button" class="btn btn-default btn-lg"> >> </a></li>
             </ul>
           </div>
           <div class="pantalla">
@@ -33,7 +33,7 @@
               </div>
               <div class="col-md-8">
                 <select id="listado_clientes" name="clientes" onChange="" class="form-control">
-                  <option value="">1</option>
+                  
                 </select>
               </div>
               <hr>
@@ -41,7 +41,7 @@
                   <label>Password</label>
                 </div>
                 <div class="col-md-8">
-                  <input id="pass" class="form-control"/>
+                  <input id="pass"  value="" type="password" disabled="true" maxlength="4" class="form-control"/>
                 </div>
             </div>
           </div>
@@ -62,25 +62,25 @@
           <div class="col-md-6">
             <div class="btnb">
               <ul>
-                <li><a id="btnb1" href="#" role="button" class="btn btn-default btn-lg">1</a></li>
-                <li><a id="btnb2" href="#" role="button" class="btn btn-default btn-lg">2</a></li>
-                <li><a id="btnb3" href="#" role="button" class="btn btn-default btn-lg">3</a></li>
-                <li><a id="btnb4" href="#" role="button" class="btn btn-default btn-lg">4</a></li>
-                <li><a id="btnb5" href="#" role="button" class="btn btn-default btn-lg">5</a></li>
-                <li><a id="btnb6" href="#" role="button" class="btn btn-default btn-lg">6</a></li>
-                <li><a id="btnb7" href="#" role="button" class="btn btn-default btn-lg">7</a></li>
-                <li><a id="btnb8" href="#" role="button" class="btn btn-default btn-lg">8</a></li>
-                <li><a id="btnb9" href="#" role="button" class="btn btn-default btn-lg">9</a></li>
-                <li><a id="btnb0" href="#" role="button" class="btn btn-default btn-lg">.</a></li>
-                <li><a id="btnb0" href="#" role="button" class="btn btn-default btn-lg">0</a></li>
-                <li><a id="btnb0" href="#" role="button" class="btn btn-default btn-lg">00</a></li>
+                <li class=""><a id="btnb1" href="#" role="button" onclick="adicionarPass('1')" class="btn btn-default btn-lg height_botones_tablero">1</a></li>
+                <li><a id="btnb2" href="#" role="button" onclick="adicionarPass('2')" class="btn btn-default btn-lg">2</a></li>
+                <li><a id="btnb3" href="#" role="button" onclick="adicionarPass('3')" class="btn btn-default btn-lg">3</a></li>
+                <li><a id="btnb4" href="#" role="button" onclick="adicionarPass('4')" class="btn btn-default btn-lg">4</a></li>
+                <li><a id="btnb5" href="#" role="button" onclick="adicionarPass('5')" class="btn btn-default btn-lg">5</a></li>
+                <li><a id="btnb6" href="#" role="button" onclick="adicionarPass('6')" class="btn btn-default btn-lg">6</a></li>
+                <li><a id="btnb7" href="#" role="button" onclick="adicionarPass('7')" class="btn btn-default btn-lg">7</a></li>
+                <li><a id="btnb8" href="#" role="button" onclick="adicionarPass('8')" class="btn btn-default btn-lg">8</a></li>
+                <li><a id="btnb9" href="#" role="button" onclick="adicionarPass('9')" class="btn btn-default btn-lg">9</a></li>
+                <li><a id="btnb0" href="#" role="button" onclick="adicionarPass('0')" class="btn btn-default btn-lg">0</a></li>
+                <li><a id="btnb0" href="#" role="button" onclick="adicionarPass('.')" class="btn btn-default btn-lg">.</a></li>
+                <li><a id="btnb0" href="#" role="button" onclick="adicionarPass('00')" class="btn btn-default btn-lg">00</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6">
             <div class="btnbi">
               <ul>
-                <li><a id="btnba" href="#" role="button" class="btn btn-default btn-lg">ACEPTAR</a></li>
+                <li><a id="btnba" href="#" role="button" class="btn btn-default btn-lg" onclick="verificarUser()">ACEPTAR</a></li>
                 <li><a id="btnbl" href="#" role="button" class="btn btn-default btn-lg">LIMPIAR</a></li>
                 <li><a id="btnbc" href="#" role="button" class="btn btn-default btn-lg">CANCELAR</a></li>
                 <li><a id="btnbc" href="#" role="button" class="btn btn-default btn-lg">BORRAR</a></li>
