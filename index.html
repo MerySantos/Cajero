@@ -26,25 +26,41 @@
               <li><a id="btn4" href="#" role="button" class="btn btn-default btn-lg"> >> </a></li>
             </ul>
           </div>
-          <div class="pantalla">
-            <div class="row contp">
-              <div class="col-md-4">
-                <label>Cliente/Cuenta</label>
-              </div>
-              <div class="col-md-8">
-                <select id="listado_clientes" name="clientes" onChange="" class="form-control">
-                  
-                </select>
-              </div>
-              <hr>
+          <div id="pantallas">
+            <!-- Proceso1 -->
+            <div class="pantalla" id="proceso1">
+              <div class="row contp">
                 <div class="col-md-4">
-                  <label>Password</label>
+                  <label>Cliente/Cuenta</label>
                 </div>
                 <div class="col-md-8">
-                  <input id="pass"  value="" type="password" disabled="true" maxlength="4" class="form-control"/>
+                  <select id="listado_clientes" name="clientes" onChange="" class="form-control">
+                    
+                  </select>
                 </div>
+                <hr>
+                  <div class="col-md-4">
+                    <label>Password</label>
+                  </div>
+                  <div class="col-md-8">
+                    <input id="pass"  value="" type="password" disabled="true" maxlength="4" class="form-control"/>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Proceso2 -->
+            <div class="pantalla" id="proceso2">
+              <div class="contp">         
+                <p>RETIRO</p>
+                
+                <p>TRANSFERENCIA</p>
+                
+                <p>DEPOSITO</p>
+                
+              </div>
             </div>
           </div>
+          
 
           <div class="btn_der pull-right">
             <ul>

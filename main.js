@@ -14,7 +14,7 @@
 // Inicializar app
 	function initApp(){
   		updateSelectClientes();
-  		// updateReport();
+  		
 	}
 
 
@@ -48,7 +48,11 @@
 
 		if (clientes[nro_cliente].pass==pass_cliente) {
 			proceso=2;
-			alert("ok");
+			alert("BIENVENIDO AL BANCO BCP");
+			// document.getElementById(proceso2).show;
+			$('#proceso1').hide();
+			$('#proceso2').show();
+
 			//mostrar la nueva pantalla y ocultar la actual
 		}
 		else{
