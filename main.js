@@ -26,7 +26,8 @@
 	}
 
 	function retiroEspecifico(){
-		var monto =$('');
+		// var monto =$('montoEsp');
+		var monto=document.getElementById('montoEsp').value;
 		var nuevo_saldo = verificarSaldo(monto);
 		alert("Su saldo es : "+ nuevo_saldo);
 	}
@@ -35,6 +36,56 @@
 // Deposito
 
 // Operaciones
+	// Escoger Operaciones
+	function opcionesAceptar(){
+		switch(proceso){
+			case 1:
+				verificarUser();
+				break;
+			case 2:
+				break;
+			case 3:
+				if(document.getElementById('montoEsp').value== ""){
+					retiro();
+				}
+				else{
+					retiroEspecifico();
+				}
+				
+				break;	
+			case 4:
+				break;	
+			case 5:
+				break;	
+		}
+	}
+	function elegirOperacion(operacion,monto){
+		if(proceso==2){
+			switch (operacion) {
+				case 'retiro':
+					document.getElementById('proceso2').style.display='none';
+					document.getElementById('proceso3').style.display='block';
+					proceso=3
+			    	break;
+				case 'transferencia':
+					document.getElementById('proceso2').style.display='none';
+					document.getElementById('proceso4').style.display='block';
+					proceso=4
+					break;
+				case 'deposito':
+					document.getElementById('proceso2').style.display='none';
+					document.getElementById('proceso5').style.display='block';
+					proceso=5
+					break;
+			}
+		}
+		if (proceso==3){
+			if(monto=='otro monto'){
+				document.getElementById('nuevo_monto').style.display='block';
+					
+			}
+		}
+	}
 	// Añadir datos de contraseña
 	function adicionarPass(numero){
 		if (document.getElementById("pass").value.length < 4) {
@@ -42,30 +93,28 @@
 			document.getElementById("pass").value= pass_cliente;
 		}
 	}
-
+	// Verificar si el usuario concuerda con la contraseña
 	function verificarUser(){
 		nro_cliente = document.getElementById("listado_clientes").selectedIndex;
 
 		if (clientes[nro_cliente].pass==pass_cliente) {
 			proceso=2;
 			alert("BIENVENIDO AL BANCO BCP");
-			// document.getElementById(proceso2).show;
-			$('#proceso1').hide();
-			$('#proceso2').show();
-
-			//mostrar la nueva pantalla y ocultar la actual
+			document.getElementById('proceso1').style.display='none';
+			document.getElementById('proceso2').style.display='block';
 		}
+
 		else{
 			alert("La contraseña es erronea");
 			document.getElementById("pass").innerHTML='';
 			pass_cliente = "";
 		}
 	}
-
+	// Verificar Saldo disponible
 	function verificarSaldo(monto_retiro){
 		var nuevo_saldo;
-		if (monto_retiro <= clientes.saldo) {
-			nuevo_saldo = clientes.saldo - monto_retiro;
+		if (parseFloat(monto_retiro) <= parseFloat(clientes.saldo)) {
+			nuevo_saldo = parseFloat(clientes.saldo) - parseFloat(monto_retiro);
 			alert("Recoja su dinero");
 		}
 		else{

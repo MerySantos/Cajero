@@ -1,7 +1,8 @@
 /**{outline: 0.1px solid rgba(255,0,0,0.3)};*/
 
-#pantallas #proceso2{ display: none; }
+/*#pantallas>#proceso2,#proceso3,#proceso4,#proceso5{ display: none; }*/
 
+#nuevo_monto{ display: none; }
 .cont_cajero {
   margin: 60px;
   padding: 20px;
@@ -116,13 +117,14 @@
   height: 300px;
   background: #A8C6FA;
   margin-left: 110px;
+  text-align: left;
 }
 #proceso2  .contp{
   padding: 8px 20px 50px 20px;
 }
  #proceso2  .contp p{
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 #proceso3 {
   width: 450px;
