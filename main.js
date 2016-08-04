@@ -46,6 +46,7 @@
 			clientes[nro_cliente].saldo=clientes[nro_cliente].saldo-montodeposito;
 			alert("Se deposito S/."+montodeposito+" al cliente "+ $("#listado_clientes2 option:selected").html());
 			alert("Su nuevo saldo es " + clientes[nro_cliente].saldo);
+			cancelarTodo();
 		}
 		else{
 			alert("Al parecer no ingreso un monto correcto");
