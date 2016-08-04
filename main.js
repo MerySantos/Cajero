@@ -53,7 +53,15 @@
 		}
 	}
 // Deposito
-
+	function deposito(){
+		var monto_deposito;
+		alert(document.getElementById("deposi").value);
+		monto_deposito= document.getElementById('deposi').value;
+		alert(monto_deposito);
+		var nsaldo_actual = parseFloat(clientes[nro_cliente].saldo) + monto_deposito;
+			alert("Deposito Realizado"+" - "+"su saldo actual es de:" + nsaldo_actual);
+			cancelarTodo();
+	}
 // Operaciones
 	// Verificar Saldo disponible
 	function verificarSaldo(monto_retiro){
@@ -94,6 +102,7 @@
 				transferencia();
 				break;	
 			case 5:
+				deposito();
 				break;	
 		}
 	}
