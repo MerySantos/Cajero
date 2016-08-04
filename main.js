@@ -38,6 +38,19 @@
 	}
 
 // Transferencia
+	function transferencia(){
+		var select2=document.getElementById("listado_clientes2").selectedIndex;
+		var montodeposito= parseFloat(document.getElementById("montoTransferencia").value);
+		if (montodeposito!="") {
+			clientes[select2].saldo=clientes[select2].saldo+montodeposito;
+			clientes[nro_cliente].saldo=clientes[nro_cliente].saldo-montodeposito;
+			alert("Se deposito S/."+montodeposito+" al cliente "+ $("#listado_clientes2 option:selected").html());
+			alert("Su nuevo saldo es " + clientes[nro_cliente].saldo);
+		}
+		else{
+			alert("Al parecer no ingreso un monto correcto");
+		}
+	}
 // Deposito
 
 // Operaciones
@@ -77,6 +90,7 @@
 				}
 				break;	
 			case 4:
+				transferencia();
 				break;	
 			case 5:
 				break;	
@@ -146,7 +160,11 @@
 // Operaciones Estaticas
 	function updateSelectClientes(){
 	  var select=document.getElementById("listado_clientes");
+	  var select2=document.getElementById("listado_clientes2");
+	  
+
 	  for (var i=0;i<clientes.length;i++){
 	    select.innerHTML+='<option value="'+ i +'">'+clientes[i].nombre+"  "+ clientes[i].nrocuenta+' </option>';
+	    select2.innerHTML+='<option value="'+ i +'">'+clientes[i].nombre+"  "+ clientes[i].nrocuenta+' </option>';
 	  }
 	}

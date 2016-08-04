@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
   <script src="main.js"></script>
 </head>
 <body onload="initApp()">
@@ -94,20 +95,19 @@
             <!-- Proceso4 -->
             <div class="pantalla" id="proceso4">
               <div class="row contp">
-                <div class="col-md-4">
-                  <label>Cliente/Cuenta</label>
+                <div class="col-md-5">
+                  <label>Cliente a transferir:</label>
                 </div>
-                <div class="col-md-8">
-                  <select id="listado_clientes" name="clientes" onChange="" class="form-control">
-                    <option value="">1</option>
+                <div class="col-md-7">
+                  <select id="listado_clientes2" name="clientes" onChange="" class="form-control">
                   </select>
                 </div>
                   <hr>
-                <div class="col-md-4">
-                  <label>Password</label>
+                <div class="col-md-5">
+                  <label>Monto a depositar</label>
                 </div>
-                <div class="col-md-8">
-                  <input id="pass" class="form-control"/>
+                <div class="col-md-7">
+                  <input id="montoTransferencia" type="number" class="form-control"/>
                 </div>
               </div>
             </div>
