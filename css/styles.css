@@ -138,3 +138,32 @@
   font-weight: 5px;
   margin-bottom: 30px;
 }
+
+#proceso4 {
+  width: 450px;
+  height: 300px;
+  background: #A8C6FA;
+  margin-left: 110px;
+}
+#proceso4 .contp{
+  padding: 100px 20px 100px 20px;
+}
+ #proceso4 .contp label{
+  font-size: 17px;
+  font-weight: 5px;
+}
+
+
+#proceso5 {
+  width: 450px;
+  height: 300px;
+  background: #A8C6FA;
+  margin-left: 110px;
+}
+#proceso5 .contp{
+  padding: 100px 20px 100px 20px;
+}
+ #proceso5 .contp label{
+  font-size: 17px;
+  font-weight: 5px;
+}
