@@ -36,6 +36,11 @@
 // Deposito
 
 // Operaciones
+	// Cancelar las operaciones
+	function cancelarTodo(){
+		window.location.reload();
+	}	
+		
 	// Escoger Operaciones
 	function opcionesAceptar(){
 		switch(proceso){
@@ -46,12 +51,11 @@
 				break;
 			case 3:
 				if(document.getElementById('montoEsp').value== ""){
-					retiro();
+					alert("Seleccione un monto correcto");
 				}
 				else{
 					retiroEspecifico();
 				}
-				
 				break;	
 			case 4:
 				break;	
@@ -82,7 +86,10 @@
 		if (proceso==3){
 			if(monto=='otro monto'){
 				document.getElementById('nuevo_monto').style.display='block';
-					
+			}
+			else{
+				retiro(monto);
+
 			}
 		}
 	}
@@ -106,7 +113,7 @@
 
 		else{
 			alert("La contraseña es erronea");
-			document.getElementById("pass").innerHTML='';
+			document.getElementById("pass").value='';
 			pass_cliente = "";
 		}
 	}

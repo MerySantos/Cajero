@@ -1,6 +1,6 @@
 /**{outline: 0.1px solid rgba(255,0,0,0.3)};*/
 
-/*#pantallas>#proceso2,#proceso3,#proceso4,#proceso5{ display: none; }*/
+#pantallas>#proceso2,#proceso3,#proceso4,#proceso5{ display: none; }
 
 #nuevo_monto{ display: none; }
 .cont_cajero {
