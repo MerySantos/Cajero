@@ -104,7 +104,7 @@
 					document.getElementById('proceso2').style.display='none';
 					document.getElementById('proceso3').style.display='block';
 					proceso=3;
-					$('#btn1').click(false);
+					$('#btn1').active(false);
 
 			    	break;
 				case 'transferencia':
