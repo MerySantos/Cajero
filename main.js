@@ -22,7 +22,9 @@
 	function retiro(monto){
 	// Solo si presiona en un numero fijado
 		var nuevo_saldo = verificarSaldo(monto);
+		clientes[nro_cliente].saldo=nuevo_saldo;
 		alert("Su saldo es : "+ nuevo_saldo);
+		cancelarTodo();
 	}
 
 	function retiroEspecifico(){
@@ -30,14 +32,31 @@
 		var monto=document.getElementById('montoEsp').value;
 		var nuevo_saldo = verificarSaldo(monto);
 		alert("Su saldo es : "+ nuevo_saldo);
+		clientes[nro_cliente].saldo=nuevo_saldo;
+		cancelarTodo();
+
 	}
 
 // Transferencia
 // Deposito
 
 // Operaciones
+	// Verificar Saldo disponible
+	function verificarSaldo(monto_retiro){
+		var nuevo_saldo;
+		if (parseFloat(monto_retiro) <= parseFloat(clientes[nro_cliente].saldo)) {
+			nuevo_saldo = parseFloat(clientes[nro_cliente].saldo) - parseFloat(monto_retiro);
+			alert("Recoja su dinero");
+		}
+		else{
+			nuevo_saldo = clientes.saldo;
+			alert("Saldo Insuficiente");
+		}
+		return nuevo_saldo;
+	}
 	// Cancelar las operaciones
 	function cancelarTodo(){
+		alert("Gracias por su preferencia. Hasta Luego");
 		window.location.reload();
 	}	
 		
@@ -69,18 +88,23 @@
 				case 'retiro':
 					document.getElementById('proceso2').style.display='none';
 					document.getElementById('proceso3').style.display='block';
-					proceso=3
+					proceso=3;
+					$('#btn1').click(false);
+
 			    	break;
 				case 'transferencia':
 					document.getElementById('proceso2').style.display='none';
 					document.getElementById('proceso4').style.display='block';
 					proceso=4
+					$('#btn2').click(false);
 					break;
 				case 'deposito':
 					document.getElementById('proceso2').style.display='none';
 					document.getElementById('proceso5').style.display='block';
 					proceso=5
+					$('#btn3').click(false);
 					break;
+
 			}
 		}
 		if (proceso==3){
@@ -117,19 +141,7 @@
 			pass_cliente = "";
 		}
 	}
-	// Verificar Saldo disponible
-	function verificarSaldo(monto_retiro){
-		var nuevo_saldo;
-		if (parseFloat(monto_retiro) <= parseFloat(clientes.saldo)) {
-			nuevo_saldo = parseFloat(clientes.saldo) - parseFloat(monto_retiro);
-			alert("Recoja su dinero");
-		}
-		else{
-			nuevo_saldo = clientes.saldo;
-			alert("Saldo Insuficiente");
-		}
-		return nuevo_saldo;
-	}
+	
 
 // Operaciones Estaticas
 	function updateSelectClientes(){
