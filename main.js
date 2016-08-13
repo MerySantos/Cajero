@@ -55,12 +55,12 @@
 // Deposito
 	function deposito(){
 		var monto_deposito;
-		alert(document.getElementById("deposi").value);
-		monto_deposito= document.getElementById('deposi').value;
+		monto_deposito= document.getElementById('depositar').value;
 		alert(monto_deposito);
-		var nsaldo_actual = parseFloat(clientes[nro_cliente].saldo) + monto_deposito;
-			alert("Deposito Realizado"+" - "+"su saldo actual es de:" + nsaldo_actual);
-			cancelarTodo();
+
+		var nsaldo_actual = parseFloat(clientes[nro_cliente].saldo) + parseFloat(monto_deposito);
+		alert("Deposito Realizado,su saldo actual es de: " + nsaldo_actual);
+		cancelarTodo();
 	}
 // Operaciones
 	// Verificar Saldo disponible
